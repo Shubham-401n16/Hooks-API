@@ -5,9 +5,9 @@
 ### Author: Shubham Majumdar
 
 ### Links and Resources
-* [Code Sandbox]
+* [Code Sandbox](https://codesandbox.io/s/github/Shubham-401n16/Hooks-API)
 * [Github Actions]
-* [Netlify App] (https://priceless-shockley-b74e26.netlify.app)
+* [Netlify App](https://priceless-shockley-b74e26.netlify.app)
 
 #### Documentation
 * [api docs](http://xyz.com/api-docs) (API servers)
