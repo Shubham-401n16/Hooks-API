@@ -1,35 +1,35 @@
-import React, { useState } from 'react';
+import React from 'react';
+
+import Form from 'react-bootstrap/Form';
 
 function ToDoItem(props) {
+    return (
+        <div>
+            <p>{props.data.description}</p>
 
-  const [taskComplete, setComplete] = useState(props.item.complete);
+            <p>{props.data.assignee}</p>
 
+            <p>{props.data.difficulty}</p>
 
-  return (
-    <div className="item">
-      
-      <div className="description">
-        <p className="title">Description: </p>
-        <p className="text">{props.item.description}</p>
-      </div>
-
-      <div className="assigned-to">
-        <p className="title">For: </p>
-        <p className="text">{props.item.assignedTo}</p>
-      </div>
-
-      <div className="difficulty">
-        <p className="title">Difficulty: </p>
-        <p className="text">{props.item.difficulty}</p>
-      </div>
-
-      <div className="complete">
-        <label className="title">Complete:</label>
-        <input type="checkbox" checked={taskComplete} onChange={() => { setComplete(!taskComplete) }}/>
-      </div>
-
-    </div>
-  )
+            <Form.Group controlId={'todo-status-' + props.indx}>
+                <Form.Label>Status</Form.Label>
+                <Form.Check
+                    value={props.data.status === 'complete'}
+                    type='switch'
+                    onChange={() => {
+                        let newTask = { ...props.data };
+                        newTask.status =
+                            newTask.status === 'complete'
+                                ? 'incomplete'
+                                : 'complete';
+                        props.modifyTask(props.indx, newTask);
+                    }}
+                    id={'status-switch-' + props.indx}
+                    label={props.data.status}
+                />
+            </Form.Group>
+        </div>
+    );
 }
 
 export default ToDoItem;
