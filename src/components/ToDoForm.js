@@ -18,7 +18,7 @@ function ToDoForm(props) {
     }
 
     return (
-        <Form>
+        <Form id ="main-form">
             <Form.Group controlId='todo-description'>
                 <Form.Label>Task Description</Form.Label>
                 <Form.Control
@@ -69,7 +69,7 @@ function ToDoForm(props) {
                 />
             </Form.Group>
 
-            <Button variant='primary' type='button' onClick={formSubmit}>
+            <Button id ="submit-button" variant='primary' type='button' onClick={formSubmit}>
                 Add Task
             </Button>
         </Form>

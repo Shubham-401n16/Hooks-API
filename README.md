@@ -1,13 +1,13 @@
-# Props-and-State---Postman-replica
+# Hooks - API
 
-## props And State
+## Hooks - API
 
 ### Author: Shubham Majumdar
 
 ### Links and Resources
 * [Code Sandbox]
 * [Github Actions]
-* [Netlify App]
+* [Netlify App] (https://priceless-shockley-b74e26.netlify.app)
 
 #### Documentation
 * [api docs](http://xyz.com/api-docs) (API servers)
@@ -25,6 +25,8 @@
 * npm install node-sass
 * npm install enzyme-adapter-react-16
 * npm install react-router-dom
+* npm install react-bootstrap
+* npm install bootstrap
 
   
 #### Tests
